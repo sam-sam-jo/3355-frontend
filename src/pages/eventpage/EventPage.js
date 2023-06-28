@@ -8,7 +8,8 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import comingsoon from "../../images/comingsoon.jpg";
+import event1 from "../../images/EventImg/chicken.jpg";
+import event2 from "../../images/EventImg/happy.jpg";
 
 const EventPage = () => {
   return (
@@ -28,15 +29,15 @@ const EventPage = () => {
               <CardMedia
                 component="img"
                 height="140"
-                src={comingsoon}
+                src={event1}
                 alt="coming soon"
               />
               <CardContent>
                 <Typography gutterBottom variant="body1" component="div">
-                  Event 1
+                  훈제 닭가슴살 이벤트!
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  이벤트 1이다. 내가 낸데
+                  참나무 훈연으로 담백한 풍미 가득
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -48,15 +49,15 @@ const EventPage = () => {
               <CardMedia
                 component="img"
                 height="140"
-                src={comingsoon}
+                src={event2}
                 alt="coming soon"
               />
               <CardContent>
                 <Typography gutterBottom variant="body1" component="div">
-                  Event 2
+                  만원의 행복
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  이벤트 2이다. 니 뭐 돼?
+                  부담 없는 식단 쇼핑
                 </Typography>
               </CardContent>
             </CardActionArea>
