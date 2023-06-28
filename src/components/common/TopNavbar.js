@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { styled } from "@mui/system";
 import HeadLogo from "../../images/HeadLogo_3355.svg";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -42,7 +42,7 @@ const TopNavbar = () => {
   const [badgeCnt, setBadgeCnt] = useState(0);
 
   const userNo = useSelector((state) => state.userNo); // 리덕스 변수 사용하기
-  // const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     axios({
@@ -57,7 +57,7 @@ const TopNavbar = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [location, userNo]);
 
   const isMenuOpen = Boolean(profileMenuAnchor);
 
