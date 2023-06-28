@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   Card,
@@ -8,10 +8,21 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 import event1 from "../../images/EventImg/chicken.jpg";
 import event2 from "../../images/EventImg/happy.jpg";
 
+
 const EventPage = () => {
+  const userNo = useSelector((state) => state.userNo);
+  const navi = useNavigate({});
+  //로그인이 안되있으면 메인페이지로 돌아감
+  useEffect(() => {
+    if (userNo === 0) {
+      navi("/");
+    }
+  });
   return (
     <Box p={3}>
       <Typography

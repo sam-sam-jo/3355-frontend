@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import { Box, TextField } from "@mui/material";
 
@@ -20,6 +20,13 @@ const Toast = Swal.mixin({
 });
 
 const MyChangePass = () => {
+  //로그인이 안되있으면 메인페이지로 돌아감
+  useEffect(() => {
+    if (userNo === 0) {
+      navi("/");
+    }
+  });
+
   //유저 입력 변수들
   const userNo = useSelector((state) => state.userNo);
   const navi = useNavigate({});
