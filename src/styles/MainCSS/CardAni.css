@@ -40,7 +40,7 @@
 }
 
 .card .back {
-  background: orange;
+  background: #c2825d;
   transform: rotateY(180deg);
   text-align: center;
 }
