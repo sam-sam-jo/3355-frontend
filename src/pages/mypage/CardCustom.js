@@ -24,6 +24,12 @@ const Toast = Swal.mixin({
 });
 
 const CardCustom = () => {
+  //로그인이 안되있으면 메인페이지로 돌아감
+  useEffect(() => {
+    if (userNo === 0) {
+      navi("/");
+    }
+  });
   //유저 정보
   const userNo = useSelector((state) => state.userNo);
   const [color1, setColor1] = useState(""); //1색

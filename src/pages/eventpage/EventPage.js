@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   Card,
@@ -9,8 +9,18 @@ import {
   Typography,
 } from "@mui/material";
 import comingsoon from "../../images/comingsoon.jpg";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 
 const EventPage = () => {
+  const userNo = useSelector((state) => state.userNo);
+  const navi = useNavigate({});
+  //로그인이 안되있으면 메인페이지로 돌아감
+  useEffect(() => {
+    if (userNo === 0) {
+      navi("/");
+    }
+  });
   return (
     <Box p={3}>
       <Typography

@@ -68,8 +68,8 @@ const FollowerAllPost = (props) => {
                 } else {
                   //좋아요 취소
                 }
-                // Axios 요청이 성공한 경우 화면을 다시 로드합니다.
-                window.location.reload();
+                // // Axios 요청이 성공한 경우 화면을 다시 로드합니다.
+                // window.location.reload();
               })
               .catch((err) => {
                 console.log(err);
