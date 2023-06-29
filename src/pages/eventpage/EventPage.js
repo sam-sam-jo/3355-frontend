@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import event1 from "../../images/EventImg/chicken.jpg";
 import event2 from "../../images/EventImg/happy.jpg";
-
+import event3 from "../../images/EventImg/oh.jpg";
 
 const EventPage = () => {
   const userNo = useSelector((state) => state.userNo);
@@ -33,22 +33,22 @@ const EventPage = () => {
       >
         이벤트
       </Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         <Grid item xs={12}>
           <Card sx={{ my: "16px" }}>
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="140"
-                src={event1}
+                src={event3}
                 alt="coming soon"
               />
               <CardContent>
                 <Typography gutterBottom variant="body1" component="div">
-                  훈제 닭가슴살 이벤트!
+                  오운완 챌린지!
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  참나무 훈연으로 담백한 풍미 가득
+                  챌린지에 참여하고 다양한 혜택을 누리세요!
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -69,6 +69,26 @@ const EventPage = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   부담 없는 식단 쇼핑
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Card sx={{ my: "16px" }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                src={event1}
+                alt="coming soon"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="body1" component="div">
+                  훈제 닭가슴살 이벤트!
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  참나무 훈연으로 담백한 풍미 가득
                 </Typography>
               </CardContent>
             </CardActionArea>
