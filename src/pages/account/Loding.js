@@ -49,7 +49,7 @@ LinearProgressWithLabel.propTypes = {
 };
 
 export default function LinearWithValueLabel() {
-  const [progress, setProgress] = useState(10);
+  const [progress, setProgress] = useState(0);
   const navi = useNavigate({});
   useEffect(() => {
     const timer = setInterval(() => {
@@ -63,7 +63,7 @@ export default function LinearWithValueLabel() {
   }, []);
 
   useEffect(() => {
-    if (progress === 100) {
+    if (progress === 110) {
       navi("/auth/login");
     }
   }, [progress]);
