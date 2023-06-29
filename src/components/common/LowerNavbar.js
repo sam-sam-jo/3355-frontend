@@ -52,10 +52,11 @@ const LowerNavbar = () => {
     navigationComponent = (
       <BottomNavigation value={value} onChange={handleChange}>
         <BottomNavigationAction
-          label="Events"
-          value="/event"
-          icon={<LocalActivityRoundedIcon />}
+          label="Community"
+          value="/community"
+          icon={<GroupsRoundedIcon />}
         />
+
         <BottomNavigationAction
           label="Barcode"
           value="/home"
@@ -63,9 +64,9 @@ const LowerNavbar = () => {
           onClick={handleBarcodeScan}
         />
         <BottomNavigationAction
-          label="Community"
-          value="/community"
-          icon={<GroupsRoundedIcon />}
+          label="Events"
+          value="/event"
+          icon={<LocalActivityRoundedIcon />}
         />
       </BottomNavigation>
     );
@@ -73,19 +74,20 @@ const LowerNavbar = () => {
     navigationComponent = (
       <BottomNavigation value={value} onChange={handleChange}>
         <BottomNavigationAction
-          label="Events"
-          value="/event"
-          icon={<LocalActivityRoundedIcon />}
+          label="Community"
+          value="/community"
+          icon={<GroupsRoundedIcon />}
         />
+
         <BottomNavigationAction
           label="Cards"
           value="/home"
           icon={<CreditCardRoundedIcon />}
         />
         <BottomNavigationAction
-          label="Community"
-          value="/community"
-          icon={<GroupsRoundedIcon />}
+          label="Events"
+          value="/event"
+          icon={<LocalActivityRoundedIcon />}
         />
       </BottomNavigation>
     );

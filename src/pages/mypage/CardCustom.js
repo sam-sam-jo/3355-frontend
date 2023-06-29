@@ -330,7 +330,7 @@ const CardCustom = () => {
           },
         }}
       >
-        Custom~~
+        Custom
       </Button>
     </Box>
   );

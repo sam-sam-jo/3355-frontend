@@ -100,10 +100,10 @@ const TopNavbar = () => {
         <PersonIcon sx={{ mr: "10px" }} />
         마이페이지
       </MenuItem>
-      <MenuItem onClick={handleNavigate} data-name="/home">
+      {/* <MenuItem onClick={handleNavigate} data-name="/home">
         <SettingsRoundedIcon sx={{ mr: "10px" }} />
         카드 관리
-      </MenuItem>
+      </MenuItem> */}
       <MenuItem onClick={handleNavigate} data-name="/auth/logout">
         <LogoutRoundedIcon sx={{ mr: "10px" }} />
         로그아웃
@@ -148,6 +148,15 @@ const TopNavbar = () => {
             </ListItem>
           </Link>
           <Divider />
+          <Link to="/community" className="link" onClick={closeSidebar}>
+            <ListItem>
+              <ListItemIcon>
+                <PeopleIcon />
+              </ListItemIcon>
+              <ListItemText primary="Community" />
+            </ListItem>
+          </Link>
+          <Divider />
           <Link to="/event" className="link" onClick={closeSidebar}>
             <ListItem>
               <ListItemIcon>
@@ -166,20 +175,7 @@ const TopNavbar = () => {
               <ListItemText primary="이벤트 목록 확인하기" />
             </ListItem>
           </Link>
-          <Link to="/mypage" className="link" onClick={closeSidebar}>
-            <ListItem>
-              <ListItemText primary="출석체크" />
-            </ListItem>
-          </Link>
-          <Divider />
-          <Link to="/community" className="link" onClick={closeSidebar}>
-            <ListItem>
-              <ListItemIcon>
-                <PeopleIcon />
-              </ListItemIcon>
-              <ListItemText primary="Community" />
-            </ListItem>
-          </Link>
+
           <Divider />
           <Link to="/mypage" className="link" onClick={closeSidebar}>
             <ListItem>
@@ -187,6 +183,11 @@ const TopNavbar = () => {
                 <AccountBoxIcon />
               </ListItemIcon>
               <ListItemText primary="Mypage" />
+            </ListItem>
+          </Link>
+          <Link to="/mypage" className="link" onClick={closeSidebar}>
+            <ListItem>
+              <ListItemText primary="출석체크" />
             </ListItem>
           </Link>
         </List>
