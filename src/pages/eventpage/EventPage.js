@@ -10,9 +10,10 @@ import {
 } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import event1 from "../../images/EventImg/chicken.jpg";
-import event2 from "../../images/EventImg/happy.jpg";
-import event3 from "../../images/EventImg/oh.jpg";
+import event1 from "../../images/EventImg/1.jpg";
+import event2 from "../../images/EventImg/2.png";
+import event3 from "../../images/EventImg/3.png";
+import event4 from "../../images/EventImg/4.png";
 
 const EventPage = () => {
   const userNo = useSelector((state) => state.userNo);
@@ -24,7 +25,7 @@ const EventPage = () => {
     }
   });
   return (
-    <Box p={3}>
+    <Box p={3} pb={8}>
       <Typography
         variant="h5"
         align="center"
@@ -40,7 +41,7 @@ const EventPage = () => {
               <CardMedia
                 component="img"
                 height="140"
-                src={event3}
+                src={event1}
                 alt="coming soon"
               />
               <CardContent>
@@ -65,10 +66,10 @@ const EventPage = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="body1" component="div">
-                  만원의 행복
+                  스타칼리휘트니스 연희점
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  부담 없는 식단 쇼핑
+                  오픈 이벤트! 전종목 회원권 초초특가
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -80,15 +81,35 @@ const EventPage = () => {
               <CardMedia
                 component="img"
                 height="140"
-                src={event1}
+                src={event3}
                 alt="coming soon"
               />
               <CardContent>
                 <Typography gutterBottom variant="body1" component="div">
-                  훈제 닭가슴살 이벤트!
+                  더스토리짐 전지점
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  참나무 훈연으로 담백한 풍미 가득
+                  방문상담만 해도 선물이? 뽑기 EVENT!
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Card sx={{ my: "16px" }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                src={event4}
+                alt="coming soon"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="body1" component="div">
+                  에이블짐 강남점
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  PT 공동구매 이벤트!
                 </Typography>
               </CardContent>
             </CardActionArea>

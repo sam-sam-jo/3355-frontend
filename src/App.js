@@ -60,8 +60,7 @@ const App = () => {
           currentPath === "/auth/findPass"
             ? appStyle.gradient2
             : currentPath === "/community/profileEdit" ||
-              currentPath.indexOf("/my") >= 0 ||
-              currentPath === "/event"
+              currentPath.indexOf("/my") >= 0
             ? appStyle.social
             : currentPath.indexOf("/auth") >= 0
             ? appStyle.auth
