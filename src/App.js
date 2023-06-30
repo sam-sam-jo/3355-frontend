@@ -16,6 +16,7 @@ import BarcodeScan from "./components/BarcodeScan";
 import Pay from "./pages/card/Pay";
 import CardCreate from "./pages/account/CardCreate";
 import Navbar from "./pages/common/Navbar";
+import Navbar2 from "./pages/common/Navbar2";
 import PayComplete from "./pages/card/PayComplete";
 import FindPass from "./pages/account/FindPass";
 import ChangePass from "./pages/account/ChangePass";
