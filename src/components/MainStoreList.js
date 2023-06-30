@@ -6,14 +6,14 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import "../styles/MainCSS/StoreList.css";
-import health1 from "../images/ListImg/healthImg1.png";
-import health2 from "../images/ListImg/bowlinglogo1.png";
-import health3 from "../images/ListImg/baseballlogo2.png";
-import health4 from "../images/ListImg/soccerlogo.png";
-import chicken1 from "../images/ListImg/Rankinglogo.png";
-import chicken2 from "../images/ListImg/masitdaklogo.png";
-import chicken3 from "../images/ListImg/kookminlogo.png";
-import chicken4 from "../images/ListImg/heodaklogo.png";
+import health1 from "../images/ListImg/ablegym.png";
+import health2 from "../images/ListImg/fitnesspeople.png";
+import health3 from "../images/ListImg/spogym.png";
+import health4 from "../images/ListImg/bodystargym.png";
+import trainer1 from "../images/ListImg/김성욱트레이너.png";
+import trainer2 from "../images/ListImg/김성준트레이너.png";
+import trainer3 from "../images/ListImg/안재훈트레이너.png";
+import trainer4 from "../images/ListImg/조성무트레이너.png";
 import { Divider } from "@mui/material";
 
 function MainStoreList({ children, value, index }) {
@@ -59,11 +59,11 @@ function ListTabs() {
         indicatorColor="secondary"
         aria-label="secondary tabs example"
       >
-        <Tab label="가게" {...a11yProps(0)} />
-        <Tab label="식품" {...a11yProps(1)} />
+        <Tab label="헬스장" {...a11yProps(0)} />
+        <Tab label="트레이너" {...a11yProps(1)} />
       </Tabs>
 
-      {/* 가게목록 */}
+      {/* 헬스장 목록 */}
       <MainStoreList value={value} index={0}>
         <Grid container spacing={2} className="gridList">
           <Grid
@@ -80,7 +80,9 @@ function ListTabs() {
               src={health1}
               style={{
                 objectFit: "cover",
-                height: "80px",
+
+                height: "30%",
+                width: "100%",
               }}
               alt="헬스장이미지"
             />
@@ -96,11 +98,10 @@ function ListTabs() {
               sx={{
                 fontSize: "inherit",
                 alignItems: "center",
-                marginLeft: "30%",
+                margin: "0 auto",
               }}
-              align="center"
             >
-              택주네 헬스장
+              AbleGYM
             </Typography>
           </Grid>
           <Divider sx={{ width: "100%" }} />
@@ -118,7 +119,8 @@ function ListTabs() {
               src={health2}
               style={{
                 objectFit: "cover",
-                height: "80px",
+                height: "100%",
+                width: "100%",
               }}
               alt="헬스장이미지"
             />
@@ -134,11 +136,10 @@ function ListTabs() {
               sx={{
                 fontSize: "inherit",
                 alignItems: "center",
-                marginLeft: "30%",
+                margin: "0 auto",
               }}
-              align="center"
             >
-              경윤쓰 볼링장
+              FITNESS PEOPLE
             </Typography>
           </Grid>
           <Divider sx={{ width: "100%" }} />
@@ -156,10 +157,10 @@ function ListTabs() {
               src={health3}
               style={{
                 objectFit: "cover",
-                height: "70px",
-                margin: "5px auto",
+                height: "100%",
+                width: "100%",
               }}
-              alt="스크린야구장이미지"
+              alt="헬스장이미지"
             />
           </Grid>
           <Grid
@@ -173,11 +174,11 @@ function ListTabs() {
               sx={{
                 fontSize: "inherit",
                 alignItems: "center",
-                marginLeft: "30%",
+                margin: "0 auto",
               }}
               align="center"
             >
-              지만쓰 야구장
+              SPOGYM
             </Typography>
           </Grid>
           <Divider sx={{ width: "100%" }} />
@@ -192,8 +193,8 @@ function ListTabs() {
           >
             <img
               src={health4}
-              style={{ objectFit: "cover", height: "80px" }}
-              alt="풋살장이미지"
+              style={{ objectFit: "cover", height: "100%", width: "100%" }}
+              alt="헬스장이미지"
             />
           </Grid>
           <Grid
@@ -207,17 +208,17 @@ function ListTabs() {
               sx={{
                 fontSize: "inherit",
                 alignItems: "center",
-                marginLeft: "30%",
+                margin: "0 auto",
               }}
               align="center"
             >
-              태영쓰 풋살장
+              BodyStarGYM
             </Typography>
           </Grid>
         </Grid>
       </MainStoreList>
 
-      {/* 식품 */}
+      {/* 트레이너 목록 */}
       <MainStoreList value={value} index={1}>
         <Grid container spacing={2} className="gridList">
           <Grid
@@ -230,13 +231,14 @@ function ListTabs() {
             }}
           >
             <img
-              src={chicken1}
+              src={trainer1}
               style={{
                 objectFit: "cover",
-                height: "70px",
-                paddingBottom: "16px",
+                width: "100%",
+                height: "100%",
+                marginBottom: "10px",
               }}
-              alt="랭킹닭컴 이미지"
+              alt="김성욱트레이너"
             />
           </Grid>
           <Grid
@@ -250,11 +252,11 @@ function ListTabs() {
               sx={{
                 fontSize: "18px",
                 alignItems: "center",
-                marginLeft: "30%",
+                margin: "0 auto",
               }}
               align="center"
             >
-              랭킹닭컴
+              김성욱 트레이너
             </Typography>
           </Grid>
           <Divider sx={{ width: "100%" }} />
@@ -268,13 +270,14 @@ function ListTabs() {
             }}
           >
             <img
-              src={chicken2}
+              src={trainer2}
               style={{
                 objectFit: "cover",
-                height: "70px",
+                height: "100%",
+                width: "100%",
                 paddingBottom: "16px",
               }}
-              alt="맛있닭 이미지"
+              alt="김성준 트레이너"
             />
           </Grid>
           <Grid
@@ -288,11 +291,11 @@ function ListTabs() {
               sx={{
                 fontSize: "18px",
                 alignItems: "center",
-                marginLeft: "30%",
+                margin: "0 auto",
               }}
               align="center"
             >
-              맛있닭
+              김성준 트레이너
             </Typography>
           </Grid>
           <Divider sx={{ width: "100%" }} />
@@ -306,13 +309,14 @@ function ListTabs() {
             }}
           >
             <img
-              src={chicken3}
+              src={trainer3}
               style={{
                 objectFit: "cover",
-                height: "70px",
                 paddingBottom: "16px",
+                height: "100%",
+                width: "100%",
               }}
-              alt="국민상점 이미지"
+              alt="안재훈 트레이너"
             />
           </Grid>
           <Grid
@@ -326,11 +330,11 @@ function ListTabs() {
               sx={{
                 fontSize: "18px",
                 alignItems: "center",
-                marginLeft: "30%",
+                margin: "0 auto",
               }}
               align="center"
             >
-              국민상점
+              안재훈 트레이너
             </Typography>
           </Grid>
           <Divider sx={{ width: "100%" }} />
@@ -344,9 +348,9 @@ function ListTabs() {
             }}
           >
             <img
-              src={chicken4}
-              style={{ objectFit: "cover", height: "70px" }}
-              alt="허닭 이미지"
+              src={trainer4}
+              style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              alt="조성무 트레이너"
             />
           </Grid>
           <Grid
@@ -360,11 +364,11 @@ function ListTabs() {
               sx={{
                 fontSize: "18px",
                 alignItems: "center",
-                marginLeft: "30%",
+                margin: "0 auto",
               }}
               align="center"
             >
-              허닭
+              조성무 트레이너
             </Typography>
           </Grid>
         </Grid>
